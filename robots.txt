@@ -1,0 +1,11 @@
+# Goling - dropshipping.goling.com.ar
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Sitemap (generar y actualizar si agregás más páginas)
+Sitemap: https://dropshipping.goling.com.ar/sitemap.xml
+
+# Opcional: bloquear carpetas que no deban indexarse (ej. si hubiera /admin/)
+# Disallow: /admin/
