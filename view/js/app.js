@@ -46,7 +46,7 @@
     }
   });
 
-  // Carrusel de testimonios: scroll continuo lento + botones
+  // Carrusel de testimonios: scroll continuo lento + botones (compatible iOS/Safari)
   function initTestimonialsCarousel() {
     var track = document.getElementById('testimonials-track');
     var prevBtn = document.getElementById('testimonials-prev');
@@ -58,6 +58,8 @@
     var scrollAmount = cardWidth + gap;
     var speedPxPerSec = 35;
     var lastTime = 0;
+    // Posición lógica para iOS: Safari no actualiza scrollLeft bien en requestAnimationFrame
+    var logicalScroll = 0;
 
     // Duplicar contenido para bucle infinito sin saltos
     var kids = Array.prototype.slice.call(track.children);
@@ -67,24 +69,30 @@
     });
     track.appendChild(fragment);
 
+    var half = track.scrollWidth / 2;
+
     function tick(now) {
       lastTime = lastTime || now;
       var delta = Math.min((now - lastTime) / 1000, 0.2);
       lastTime = now;
-      track.scrollLeft += speedPxPerSec * delta;
-      var half = track.scrollWidth / 2;
-      if (half > 0 && track.scrollLeft >= half) {
-        track.scrollLeft -= half;
+      logicalScroll += speedPxPerSec * delta;
+      if (half > 0 && logicalScroll >= half) {
+        logicalScroll -= half;
       }
+      track.scrollLeft = logicalScroll;
       requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
 
     prevBtn.addEventListener('click', function () {
-      track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      logicalScroll -= scrollAmount;
+      if (logicalScroll < 0) logicalScroll += half;
+      track.scrollLeft = logicalScroll;
     });
     nextBtn.addEventListener('click', function () {
-      track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      logicalScroll += scrollAmount;
+      if (logicalScroll >= half) logicalScroll -= half;
+      track.scrollLeft = logicalScroll;
     });
   }
 
