@@ -309,52 +309,42 @@
                     <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4 pb-2 border-b-4 border-brand-primary/30 inline-block">¿Cómo ganás dinero con Goling?</h2>
                 </div>
 
-                <!-- Pasos en texto (numerados + flechas) -->
-                <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-2 mb-10 md:mb-12 flex-wrap">
-                    <div class="flex items-center gap-2">
-                        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-primary text-white flex items-center justify-center text-lg font-bold">1</span>
-                        <span class="text-gray-900 font-medium">El cliente compra en tu tienda</span>
-                    </div>
-                    <i class="hidden md:inline text-gray-300 flex-shrink-0" data-fa-i2svg=""><svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></i>
-                    <div class="flex items-center gap-2">
-                        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-primary text-white flex items-center justify-center text-lg font-bold">2</span>
-                        <span class="text-gray-900 font-medium">El proveedor envía el producto.</span>
-                    </div>
-                    <i class="hidden md:inline text-gray-300 flex-shrink-0" data-fa-i2svg=""><svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></i>
-                    <div class="flex items-center gap-2">
-                        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-primary text-white flex items-center justify-center text-lg font-bold">3</span>
-                        <span class="text-gray-900 font-medium">¡Vos cobrás la ganancia!</span>
-                    </div>
-                </div>
-
-                <!-- Tarjetas visuales (icono + etiqueta) -->
-                <div class="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-4 mb-10 md:mb-12">
-                    <div class="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 shadow-soft flex flex-col items-center text-center hover:shadow-card transition-shadow flex-1 md:max-w-xs">
+                <!-- Tarjetas unificadas: paso + icono + título + explicación -->
+                <div class="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-3 mb-10 md:mb-12">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-brand-primary/20 shadow-card flex flex-col items-center text-center hover:shadow-glow hover:border-brand-primary/40 transition-all duration-300 flex-1 md:max-w-xs">
+                        <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center text-xl font-bold mb-4">1</span>
                         <div class="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white flex items-center justify-center mb-4 shadow-sm p-1">
                             <img src="view/images/icono-cliente-compra.png" alt="Carrito con check - el cliente compra en tu tienda" class="w-full h-full object-contain" loading="lazy" />
                         </div>
                         <h3 class="text-lg md:text-xl font-bold text-gray-900">Comprás al proveedor</h3>
-                        <p class="text-sm text-gray-600 mt-1">Tu cliente paga en tu tienda, <span class="font-semibold text-brand-primary">automáticamente</span> se genera el pedido al proveedor y vos le pagás a él.</p>
+                        <p class="text-sm text-gray-600 mt-2">Tu cliente paga en tu tienda, <span class="font-semibold text-brand-primary">automáticamente</span> se genera el pedido al proveedor y vos le pagás a él.</p>
                     </div>
-                    <div class="flex items-center justify-center text-gray-300 flex-shrink-0 self-center hidden md:flex">
-                        <i data-fa-i2svg=""><svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></i>
+                    <div class="flex flex-shrink-0 items-center justify-center text-gray-300 self-center px-1 py-2 md:py-0">
+                        <svg class="w-6 h-6 rotate-90 md:rotate-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg>
                     </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 shadow-soft flex flex-col items-center text-center hover:shadow-card transition-shadow flex-1 md:max-w-xs">
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-brand-primary/20 shadow-card flex flex-col items-center text-center hover:shadow-glow hover:border-brand-primary/40 transition-all duration-300 flex-1 md:max-w-xs">
+                        <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center text-xl font-bold mb-4">2</span>
                         <div class="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white flex items-center justify-center mb-4 shadow-sm p-1">
-                            <img src="view/images/icono-proveedor-envia.png" alt="Repartidor con paquete en la puerta - el proveedor envía el producto" class="w-full h-full object-contain" loading="lazy" />
+                            <img src="view/images/icono-proveedor-envia.png" alt="Repartidor con paquete - el proveedor envía el producto" class="w-full h-full object-contain" loading="lazy" />
                         </div>
                         <h3 class="text-lg md:text-xl font-bold text-gray-900">El proveedor envía</h3>
-                        <p class="text-sm text-gray-600 mt-1">El producto va directo a tu cliente. Sin stock ni logística propia.</p>
+                        <p class="text-sm text-gray-600 mt-2">El producto va directo a tu cliente. Sin stock ni logística propia.</p>
                     </div>
-                    <div class="flex items-center justify-center text-gray-300 flex-shrink-0 self-center hidden md:flex">
-                        <i data-fa-i2svg=""><svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></i>
+                    <div class="flex flex-shrink-0 items-center justify-center text-gray-300 self-center px-1 py-2 md:py-0">
+                        <svg class="w-6 h-6 rotate-90 md:rotate-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg>
                     </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 shadow-soft flex flex-col items-center text-center hover:shadow-card transition-shadow flex-1 md:max-w-xs">
+
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-brand-primary/20 shadow-card flex flex-col items-center text-center hover:shadow-glow hover:border-brand-primary/40 transition-all duration-300 flex-1 md:max-w-xs">
+                        <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center text-xl font-bold mb-4">3</span>
                         <div class="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white flex items-center justify-center mb-4 shadow-sm p-1">
                             <img src="view/images/icono-cobras-margen.png" alt="Mano recibiendo moneda - cobrás el margen de ganancia" class="w-full h-full object-contain" loading="lazy" />
                         </div>
                         <h3 class="text-lg md:text-xl font-bold text-gray-900">Cobrás el margen</h3>
-                        <p class="text-sm text-gray-600 mt-1">La diferencia entre lo que paga tu cliente y lo que pagás al proveedor es tu ganancia.</p>
+                        <p class="text-sm text-gray-600 mt-2">La diferencia entre lo que paga tu cliente y lo que pagás al proveedor es tu ganancia.</p>
                     </div>
                 </div>
 
